@@ -7,9 +7,13 @@
 var routePolygon = {};
 
 $(document).ready(function(){
+
+
   $('#submit-button').on('click', function() {
+      $('.addressSelection').html('');
       let address = $('#address').val();
       let date = $('#date').val();
+      let selectionText = $("<p>Select your address below:</p>").attr('id', 'selectionText');
 
       // first request to geocoder to return list of possible results
       $.getJSON({
@@ -22,6 +26,7 @@ $(document).ready(function(){
           // creating <p> tag with formatted address as text.
           let addressResultItem = $("<p></p>").text(data.results[i].formatted_address).attr("href", "#").attr("class", "addressItem");
           // appending to parent div
+          $('.addressSelection').append(selectionText);
           $('.addressSelection').append(addressResultItem);
         }
       }) // End of first geoCoder request
