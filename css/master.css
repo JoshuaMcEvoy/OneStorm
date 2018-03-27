@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 #map {
   height: 80%;
+  position: fixed;
+  bottom: 0;
 }
-/* Optional: Makes the sample page fill the window. */
+
 html, body {
+  font-family: 'Lato', sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -10,4 +15,17 @@ html, body {
 
 header{
   text-align: center;
+  font-size: 80px;
+  color: #333739;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.container{
+  padding: 10px;
 }
